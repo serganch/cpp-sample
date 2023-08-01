@@ -1,0 +1,10 @@
+FROM gcc:latest
+#install cmake and ninja
+RUN sed -i "s@http://.*archive.ubuntu.com@http://mirrors.tools.huawei.com@g" /etc/apt/sources.list && \
+    sed -i "s@http://.*security.ubuntu.com@http://mirrors.tools.huawei.com@g" /etc/apt/sources.list && \
+    apt-get update && apt-get install -y cmake && apt-get install -y ninja-build
+WORKDIR /etc/projectData
+# This command runs your application, comment out this line to compile only
+CMD sleep 20s && mkdir -p build && cd build && cmake -GNinja -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ../ && bash
+
+LABEL Name=ProjectModelBuilder Version=0.0.1

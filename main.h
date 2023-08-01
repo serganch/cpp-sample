@@ -1,0 +1,2 @@
+
+bool bar() { return true; }

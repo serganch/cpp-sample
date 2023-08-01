@@ -1,0 +1,84 @@
+{
+  "configurations": [
+    {
+      "language": "c++",
+      "defaultProfile": "Debug",
+      "defaultProjectModelConfiguration": {
+        "command": {
+          "workingDirectory": "build",
+          "command": "cmake",
+          "arguments": [
+            "-GNinja",
+            "-DCMAKE_BUILD_TYPE=Debug",
+            "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+            "../"
+          ]
+        },
+        "dockerContainer": {
+          "image": "cpp-build-tool-worker-integration-test",
+          "cpus": 1.0,
+          "memory": "1G"
+        },
+        "artifacts": [],
+        "compileCommandsLocation": "build/compile_commands.json"
+      },
+      "defaultCodeModelConfiguration": {
+        "indexAllSymbols": false,
+        "numberOfIndexingThreads": 4,
+        "dockerContainer": {
+          "image": "clangd-indexer-worker",
+          "cpus": 1.0,
+          "memory": "1G"
+        }
+      },
+      "compilationProfiles": [
+        {
+          "name": "Release",
+          "description": "",
+          "projectModelConfiguration": {
+            "command": {
+              "workingDirectory": "build",
+              "command": "cmake",
+              "arguments": [
+                "-GNinja",
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+                "../"
+              ]
+            },
+            "dockerContainer": {
+              "image": "cpp-build-tool-worker-integration-test",
+              "cpus": 1.0,
+              "memory": "1G"
+            },
+            "artifacts": [],
+            "compileCommandsLocation": "build/compile_commands.json"
+          }
+        },
+        {
+          "name": "Debug",
+          "description": "",
+          "projectModelConfiguration": {
+            "command": {
+              "workingDirectory": "build",
+              "command": "cmake",
+              "arguments": [
+                "-GNinja",
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+                "../"
+              ]
+            },
+            "dockerContainer": {
+              "image": "cpp-build-tool-worker-integration-test",
+              "cpus": 1.0,
+              "memory": "1G"
+            },
+            "artifacts": [],
+            "compileCommandsLocation": "build/compile_commands.json"
+          }
+        }
+      ]
+    }
+  ]
+}
