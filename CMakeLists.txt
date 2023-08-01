@@ -5,5 +5,9 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(TestProject A.cpp main.cpp)
+file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/generated_sources/version.cpp
+    "const char* getVersion() { return \"${Test_VERSION}\"; }"
+)
+
+add_executable(TestProject A.cpp main.cpp ${CMAKE_CURRENT_BINARY_DIR}/generated_sources/version.cpp)
 

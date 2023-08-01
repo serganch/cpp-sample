@@ -9,6 +9,8 @@ bool foo2() {
     return bar1();
 }
 
+extern const char* getVersion();
+
 int main() {
     std::cout << "Hello World!";
     bar1();
@@ -22,6 +24,8 @@ int main() {
     delete b;
 
     foo2();
+
+    std::cout << getVersion();
 
     return 0;
 }

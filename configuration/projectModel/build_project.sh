@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cmake -GNinja -DCMAKE_BUILD_TYPE="$1" -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ../
