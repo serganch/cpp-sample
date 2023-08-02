@@ -15,7 +15,7 @@
           ]
         },
         "dockerContainer": {
-          "image": "cpp-build-tool-worker-integration-test",
+          "image": "cpp-build-tool-worker",
           "cpus": 1.0,
           "memory": "1G"
         },
@@ -45,7 +45,7 @@
               ]
             },
             "dockerContainer": {
-              "image": "cpp-build-tool-worker-integration-test",
+              "image": "cpp-build-tool-worker",
               "cpus": 1.0,
               "memory": "1G"
             },
@@ -66,7 +66,7 @@
               ]
             },
             "dockerContainer": {
-              "image": "cpp-build-tool-worker-integration-test",
+              "image": "cpp-build-tool-worker",
               "cpus": 1.0,
               "memory": "1G"
             },
