@@ -16,6 +16,7 @@ int main() {
     bar1();
 
     // some comment to trigger code model build
+    // another comment
     A* a = new A();
     std::cout << a->foo();
     delete a;
