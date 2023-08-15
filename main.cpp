@@ -15,6 +15,7 @@ int main() {
     std::cout << "Hello World!";
     bar1();
 
+    // some comment to trigger code model build
     A* a = new A();
     std::cout << a->foo();
     delete a;
