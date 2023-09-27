@@ -9,5 +9,11 @@ file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/generated_sources/version.cpp
     "const char* getVersion() { return \"${Test_VERSION}\"; }"
 )
 
+IF (CMAKE_BUILD_TYPE STREQUAL "Release") 
+    file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/generated_sources/only_release.cpp
+        "const char* isRelease() { return true; }"
+    )
+ENDIF()
+
 add_executable(TestProject A.cpp main.cpp ${CMAKE_CURRENT_BINARY_DIR}/generated_sources/version.cpp)
 
