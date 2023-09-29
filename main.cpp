@@ -24,8 +24,6 @@ int main() {
     std::cout << b->foo();
     delete b;
 
-    foo2();
-
     std::cout << getVersion();
     std::cout << foo2();
 
