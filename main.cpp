@@ -25,7 +25,7 @@ int main() {
     delete b;
 
     std::cout << getVersion();
-    std::cout << foo2();
+    std::cout << getVersion();
 
     return 0;
 }
