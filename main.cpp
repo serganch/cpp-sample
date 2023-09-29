@@ -27,6 +27,7 @@ int main() {
     foo2();
 
     std::cout << getVersion();
+    std::cout << foo2();
 
     return 0;
 }
