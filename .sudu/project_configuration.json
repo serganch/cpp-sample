@@ -36,14 +36,6 @@
           "name": "Release",
           "description": "",
           "projectModelConfiguration": {
-            "command": {
-              "workingDirectory": "build",
-              "command": "sh",
-              "arguments": [
-                "../configuration/projectModel/build_project.sh",
-                "Release"
-              ]
-            },
             "dockerContainer": {
               "image": "cpp-build-tool-worker",
               "cpus": 1.0,
