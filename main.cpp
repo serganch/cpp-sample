@@ -9,10 +9,11 @@ bool foo2() {
     return bar1();
 }
 
+// comment with chinese 语言支持
 extern const char* getVersion();
 
 int main() {
-    std::cout << "Hello World!";
+    std::cout << "Hello World! ";
     bar1();
 
     A* a = new A();

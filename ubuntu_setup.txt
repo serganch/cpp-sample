@@ -3,3 +3,4 @@ sudo apt install ninja-build
 sudo apt install build-essential
 
 #after running cmake (run_cmake.sh) use 'ninja' to build
+#chinese symbol support in comment 中文符号
