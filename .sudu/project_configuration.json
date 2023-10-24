@@ -1,7 +1,6 @@
 {
   "configurations": [
     {
-      "_comment": "chinese symbol support in comment 中文符号",
       "language": "c++",
       "defaultProfile": "Debug",
       "defaultProjectModelConfiguration": {
@@ -56,7 +55,28 @@
         },
         {
           "name": "Debug",
-          "description": "",
+          "description": "Debug",
+          "projectModelConfiguration": {
+            "command": {
+              "workingDirectory": "build",
+              "command": "sh",
+              "arguments": [
+                "../configuration/projectModel/build_project.sh",
+                "Debug"
+              ]
+            },
+            "dockerContainer": {
+              "image": "cpp-build-tool-worker",
+              "cpus": 1.0,
+              "memory": "1G"
+            },
+            "artifacts": ["build/generated_sources"],
+            "compileCommandsLocation": "build/compile_commands.json"
+          }
+        },
+        {
+          "name": "中文符号",
+          "description": "Chinese symbols support check 中文符号",
           "projectModelConfiguration": {
             "command": {
               "workingDirectory": "build",
