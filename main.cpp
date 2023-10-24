@@ -12,7 +12,7 @@ bool foo2() {
 extern const char* getVersion();
 
 int main() {
-    std::cout << "Hello World!";
+    std::cout << "你好世界";
     bar1();
 
     A* a = new A();
