@@ -25,6 +25,7 @@ int main() {
 
     foo2();
 
+    // comment to check ClangD addresses correct line in correct revision
     std::cout << getVersion();
 
     return 0;
