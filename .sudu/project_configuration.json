@@ -1,7 +1,7 @@
 {
   "configurations": [
     {
-      "_comment": "chinese symbol support in comment 中文符号",
+      "language": "duplicate json field",
       "language": "c++",
       "defaultProfile": "Debug",
       "defaultProjectModelConfiguration": {
