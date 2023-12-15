@@ -16,8 +16,11 @@ int main() {
     std::cout << "Hello World! ";
     bar1();
 
+    // a->foo() will be called in NDEBUG mode only
     A* a = new A();
-    std::cout << a->foo();
+    #ifdef NDEBUG
+        std::cout << a->foo();
+    #endif
     delete a;
 
     A* b = new B();
