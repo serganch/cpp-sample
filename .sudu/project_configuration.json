@@ -1,6 +1,7 @@
 {
   "configurations": [
     {
+      "language": "c++",
       "defaultProfile": "Debug",
       "defaultProjectModelConfiguration": {
         "command": {
