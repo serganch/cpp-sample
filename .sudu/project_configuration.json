@@ -1,6 +1,7 @@
 {
   "configurations": [
     {
+      "additionalField": true,
       "language": "c++",
       "defaultProfile": "Debug",
       "defaultProjectModelConfiguration": {
